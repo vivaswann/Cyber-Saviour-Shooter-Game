@@ -254,7 +254,7 @@ export class Renderer {
   }
 
   hud(c, s) {
-    c.strokeStyle = '#1b2235'; c.strokeRect(3, 2, 72, 15);
+    c.strokeStyle = '#1b2235'; c.strokeRect(2, 2, 40, 19);
     c.font = '4px monospace'; c.fillStyle = COLORS.green; c.fillText('VIVASWAN.EXE', 4, 7);
     c.fillStyle = '#ef476f'; c.fillText('HP', 4, 11); c.fillStyle = '#39c6df'; c.fillText('XP', 4, 15);
     px(c, 11, 9, 28, 2, '#de3d67'); px(c, 11, 13, 28, 2, '#31bdd7');
@@ -269,9 +269,11 @@ export class Renderer {
       c.textAlign = 'left';
     }
 
+    c.textAlign = 'right';
     c.fillStyle = COLORS.green;
-    c.fillText('STATUS: ONLINE', 225, 6); c.fillText('MODE: SURVIVAL', 225, 10); c.fillText(`WEAPON: ${s.player.weapon}`, 225, 14);
-    c.fillStyle = '#ffcf5a'; c.fillText(`RPG AMMO: ${s.rpgAmmo}`, 225, 19);
+    c.fillText('STATUS: ONLINE', W - 4, 6); c.fillText('MODE: SURVIVAL', W - 4, 10); c.fillText(`WEAPON: ${s.player.weapon}`, W - 4, 14);
+    c.fillStyle = '#ffcf5a'; c.fillText(`RPG AMMO: ${s.rpgAmmo}`, W - 4, 19);
+    c.textAlign = 'left';
   }
 
   overlay(c, s) {
