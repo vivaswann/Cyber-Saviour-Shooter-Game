@@ -3,19 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VIVASWAN.EXE // CITY SURVIVAL</title>
+  <title>Vivaswan.exe</title>
+  <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="cabinet">
-    <div class="brand">VIVASWAN.EXE <span>// CITY SURVIVAL TERMINAL</span></div>
-    <div class="screen-wrap">
-      <canvas id="game" width="600" height="200" aria-label="VIVASWAN.EXE pixel survival game"></canvas>
-      <div class="scanlines" aria-hidden="true"></div>
-      <div class="vignette" aria-hidden="true"></div>
-    </div>
-    <p class="hint">WASD / ARROWS MOVE &nbsp; • &nbsp; MOUSE OR SPACE FIRE &nbsp; • &nbsp; R SWITCH RPG</p>
-  </main>
+  <div style="position: relative; width: 100vw; max-width: 1280px;">
+    <canvas id="game" width="320" height="180" aria-label="VIVASWAN.EXE pixel survival game"></canvas>
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+  </div>
+  <p class="hacker-text">IT. BREAK IT. UNDERSTAND IT. BUILD IT BETTER.</p>
+  <script>
+    window.onerror = function(msg, url, line, col, error) {
+      document.body.innerHTML += '<div style="color:red; background:black; padding:20px; position:absolute; top:0; left:0; z-index:9999; font-family:sans-serif;">' + 
+        '<h3>FATAL ERROR</h3><p>' + msg + '</p><p>Line: ' + line + '</p></div>';
+    };
+  </script>
   <script type="module" src="./game/main.js"></script>
 </body>
 </html>
